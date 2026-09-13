@@ -1,0 +1,17 @@
+{
+  "name": "rota",
+  "displayName": "Rota",
+  "version": "0.1.0",
+  "description": "Coordena execução autorizada com dependências, ownership e limites claros.",
+  "author": {
+    "name": "Marco Antonio",
+    "url": "https://github.com/nmarcofernandess"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-coordination",
+    "delegation",
+    "execution-planning"
+  ],
+  "skills": "./skills/"
+}
