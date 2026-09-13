@@ -13,7 +13,25 @@ plugins/rota/
 └── skills/rota/SKILL.md
 ```
 
-Os dois marketplaces na raiz apontam para `./plugins/rota`. A distribuição inicial é local e está deliberadamente sem instalação, publicação remota ou dependências de outro plugin.
+Os dois marketplaces na raiz apontam para `./plugins/rota`. O plugin não depende de Superflow, pstack ou um runtime de workflows.
+
+## Instalação e atualização
+
+Codex:
+
+```bash
+codex plugin marketplace add nmarcofernandess/rota --ref v0.1.0
+codex plugin add rota@rota
+```
+
+Claude Code:
+
+```bash
+claude plugin marketplace add nmarcofernandess/rota@v0.1.0
+claude plugin install rota@rota
+```
+
+Para releases posteriores, atualize a referência de tag do marketplace no host, atualize seu catálogo e reinstale/atualize `rota@rota`. Abra uma nova task para recarregar as skills. Instalar Rota não converte instruções ou projetos automaticamente.
 
 ## Validação
 
@@ -27,4 +45,4 @@ O gate verifica manifests, marketplaces, o único ponto de entrada da skill e a 
 
 ## Proveniência
 
-Versão `0.1.0`, criada a partir da seção 6 do plano aprovado de simplificação do Superflow. A seção define a fronteira do Rota; este repositório não carrega runtime, contratos ou arquivos de execução daquela ferramenta.
+Versão `0.1.0`, publicada sob licença MIT. Rota concentra o protocolo de coordenação em uma única skill, independente de ferramenta, modelo ou projeto específico.
