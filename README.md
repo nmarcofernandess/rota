@@ -1,8 +1,11 @@
 # Rota
 
-Rota é um plugin de skill para desenhar e conduzir execução já autorizada. A saída padrão é um desenho curto no chat com objetivo, dependências, executor, ownership, limite de escrita, resultado, consolidação e condição de parada.
+Rota é um plugin de skill para desenhar no chat uma execução multiagente antes
+de rodá-la. A saída mostra objetivo, nós, dependências, executor/modelo,
+ownership, limite de escrita, retorno, pior caso, consolidação e parada; depois
+espera a aprovação explícita do operador.
 
-Ele preserva execução direta para tarefas simples e usa recursos de delegação apenas quando eles reduzem risco ou tempo sem criar disputa de arquivos. O desenho não é um runtime e não amplia autorização para publicar, executar ações destrutivas ou sair do pedido.
+Ele preserva execução direta para tarefas simples e usa recursos de delegação apenas quando eles reduzem risco ou tempo sem criar disputa de arquivos. O desenho não é runtime, não exige arquivo e não amplia autorização para publicar, executar ações destrutivas ou sair do pedido.
 
 ## Conteúdo
 

@@ -2,7 +2,7 @@
   "name": "rota",
   "displayName": "Rota",
   "version": "0.1.0",
-  "description": "Coordena execução autorizada com dependências, ownership e limites claros.",
+  "description": "Desenha no chat uma execução multiagente aprovável.",
   "author": {
     "name": "Marco Antonio",
     "url": "https://github.com/nmarcofernandess"

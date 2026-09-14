@@ -79,6 +79,11 @@ skill_paths = {path.relative_to(skill_root).as_posix() for path in skill_root.rg
 if skill_paths != {"rota/SKILL.md"}:
     raise SystemExit(f"Rota must expose exactly one skill entrypoint, found: {sorted(skill_paths)}")
 
+skill_text = (skill_root / "rota/SKILL.md").read_text(encoding="utf-8")
+for required in ("pare para aprovação explícita", "Pior caso:", "A escolha é proposta pela IA", "não exige arquivo"):
+    if required not in skill_text:
+        raise SystemExit(f"Rota skill missing contract phrase: {required}")
+
 for forbidden_name in (
     "superflow_rota.py",
     "plano.json",

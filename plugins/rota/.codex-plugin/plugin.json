@@ -1,7 +1,7 @@
 {
   "name": "rota",
   "version": "0.1.0",
-  "description": "Coordena execução autorizada com dependências, ownership e limites claros.",
+  "description": "Desenha no chat uma execução multiagente aprovável.",
   "author": {
     "name": "Marco Antonio",
     "url": "https://github.com/nmarcofernandess"
@@ -15,8 +15,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Rota",
-    "shortDescription": "Coordene trabalho autorizado entre agentes com responsabilidade clara.",
-    "longDescription": "Rota desenha no chat uma execução autorizada: dependências, ownership, limites de escrita, resultados, consolidação e condição de parada. Ele usa os recursos reais do ambiente e preserva a execução direta quando ela basta.",
+    "shortDescription": "Desenhe e aprove uma execução multiagente antes de rodar.",
+    "longDescription": "Rota desenha no chat uma execução com nós, agentes, modelos disponíveis, dependências, ownership, retornos, pior caso e parada. O percurso espera aprovação explícita e não exige arquivo ou runtime próprio.",
     "developerName": "Marco Antonio",
     "category": "Productivity",
     "capabilities": [

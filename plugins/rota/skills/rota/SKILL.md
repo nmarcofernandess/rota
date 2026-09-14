@@ -1,11 +1,12 @@
 ---
 name: rota
-description: Desenha e conduz execução autorizada com dependências, ownership, limites de escrita e consolidação verificável. Use quando a tarefa realmente se beneficia de coordenação entre agentes.
+description: Desenha no chat uma rota aprovável para execução com vários agentes, incluindo dependências, ownership, modelos disponíveis, retornos e parada. Use quando a tarefa realmente se beneficia de coordenação.
 ---
 
 # Rota
 
-Use Rota somente depois de o pedido autorizar a execução. Ele organiza trabalho que precisa de coordenação; uma tarefa simples continua direta, sem agentes extras.
+Use Rota quando uma execução precisa de coordenação e o operador deve enxergar o
+percurso antes de ele rodar. Uma tarefa simples continua direta, sem agentes extras.
 
 ## Desenho no chat
 
@@ -16,25 +17,35 @@ Antes de delegar, responda no chat com um diagrama curto e legível. Inclua:
 - ownership e limite exato de escrita de cada executor;
 - entrada, resultado esperado e validação de cada nó;
 - responsável pela consolidação e condição de parada.
+- quantidade máxima de agentes e rodadas no pior caso.
 
-O diagrama é comunicação, não um arquivo executável. Não crie arquivos de run, logs ou briefings por padrão. Persista contexto somente quando a continuidade da entrega ou a convenção do projeto justificar.
+O diagrama é comunicação, não um arquivo executável. Rota não exige arquivo,
+spec ou runtime próprio. Não crie arquivos de run, logs ou briefings por padrão.
+Persista contexto somente quando a continuidade da entrega ou a convenção do
+projeto justificar.
 
 ```text
 Objetivo: <resultado autorizado e verificável>
 
-N1 — <executor>: <ação> → <resultado>
+N1 — <papel · executor/modelo>: <ação> → <resultado>
      escrita: <paths ou sem escrita>
 N2 — <executor>, depende de N1: <ação> → <resultado>
      escrita: <paths ou sem escrita>
 Consolidação — <executor>: <o que será inspecionado e validado>
 Parada: <quando devolver ao operador>
+Pior caso: <n agentes · n rodadas>
 ```
 
-Escolha modelos pelas capacidades reais expostas no ambiente e pelo custo e risco da tarefa. Não invente modelos, tabelas pessoais ou equivalências fixas. Se não houver escolha disponível, use a configuração vigente e diga essa limitação no desenho.
+Escolha modelos pelas capacidades reais expostas no ambiente e pelo custo e risco da tarefa. A escolha é proposta pela IA; não invente modelos, tabelas pessoais ou equivalências fixas. Se não houver escolha disponível, use a configuração vigente e diga essa limitação no desenho.
+
+Depois de mostrar o desenho, pare para aprovação explícita. A autorização geral
+da tarefa não substitui o aceite da divisão multiagente. O aceite vale para os
+nós, ownership, ordem, modelos, limites e retornos mostrados; mudança material
+exige um desenho revisado.
 
 ## Execução
 
-Use as ferramentas de delegação nativas disponíveis. Execute em série quando não houver subagentes, quando um nó depende do anterior, quando as escritas se sobrepõem ou quando a coordenação não reduz risco. Paralelize apenas nós independentes, com ownership disjunto e quando as políticas locais permitirem.
+Após a aprovação, use as ferramentas de delegação nativas disponíveis. Execute em série quando não houver subagentes, quando um nó depende do anterior, quando as escritas se sobrepõem ou quando a coordenação não reduz risco. Paralelize apenas nós independentes, com ownership disjunto e quando as políticas locais permitirem.
 
 Cada executor recebe objetivo, fontes necessárias, paths sob sua responsabilidade, permissões já concedidas, resultado esperado e critério terminal. Um executor pode editar um arquivo existente ou retornar uma conclusão sem escrever arquivo.
 
