@@ -1,0 +1,28 @@
+{
+  "name": "rota",
+  "owner": {
+    "name": "Marco Antonio"
+  },
+  "metadata": {
+    "description": "Coordena execução autorizada com dependências, ownership e limites claros.",
+    "version": "0.1.0",
+    "pluginRoot": "."
+  },
+  "plugins": [
+    {
+      "name": "rota",
+      "source": "./plugins/rota",
+      "description": "Coordena execução autorizada com dependências, ownership e limites claros.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Marco Antonio"
+      },
+      "license": "MIT",
+      "keywords": [
+        "agent-coordination",
+        "delegation",
+        "execution-planning"
+      ]
+    }
+  ]
+}

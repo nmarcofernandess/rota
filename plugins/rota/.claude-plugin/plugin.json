@@ -1,0 +1,17 @@
+{
+  "name": "rota",
+  "displayName": "Rota",
+  "version": "0.1.0",
+  "description": "Desenha no chat uma execução multiagente aprovável.",
+  "author": {
+    "name": "Marco Antonio",
+    "url": "https://github.com/nmarcofernandess"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-coordination",
+    "delegation",
+    "execution-planning"
+  ],
+  "skills": "./skills/"
+}

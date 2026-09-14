@@ -1,0 +1,34 @@
+{
+  "name": "rota",
+  "version": "0.1.0",
+  "description": "Desenha no chat uma execução multiagente aprovável.",
+  "author": {
+    "name": "Marco Antonio",
+    "url": "https://github.com/nmarcofernandess"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-coordination",
+    "delegation",
+    "execution-planning"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Rota",
+    "shortDescription": "Desenhe e aprove uma execução multiagente antes de rodar.",
+    "longDescription": "Rota desenha no chat uma execução com nós, agentes, modelos disponíveis, dependências, ownership, retornos, pior caso e parada. O percurso espera aprovação explícita e não exige arquivo ou runtime próprio.",
+    "developerName": "Marco Antonio",
+    "category": "Productivity",
+    "capabilities": [
+      "authorized-execution",
+      "agent-coordination",
+      "dependency-planning",
+      "result-consolidation"
+    ],
+    "defaultPrompt": [
+      "Use Rota para coordenar esta execução autorizada.",
+      "Desenhe nós, dependências e ownership para esta entrega.",
+      "Conduza esta tarefa com execução serial ou paralela quando couber."
+    ]
+  }
+}
